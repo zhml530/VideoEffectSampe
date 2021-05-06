@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video app</title>
+  </head>
+  <body>
+    <h1>Video app</h1>
+    <fieldset>
+      <legend>Effect parameters in video app</legend>
+
+      <div>
+        <label for="enable_check"
+          >Enable video app
+          <input type="checkbox" id="enable_check" checked />
+        </label>
+      </div>
+      <div>
+        <label for="proportion"
+          >Proportion
+          <input type="number" id="proportion" min="1" step="0.1" value="2" />
+        </label>
+      </div>
+      <div>
+        <label for="pixel_value"
+          >Pixel value
+          <input type="number" id="pixel_value" min="0" step="1" value="100" />
+        </label>
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>Effect</legend>
+      <div>
+          <label for="filter">Filter<br>
+              <label for="filter_money">
+                  <input type="radio" name='effect' id="filter_money" value="money">
+                  money
+              </label>
+              <label for="filter_edge">
+                  <input type="radio" name='effect' id="filter_edge" value="edge">
+                  edge
+              </label>
+              <label for="filter_lego">
+                  <input type="radio" name='effect' id="filter_lego" value="lego">
+                  lego
+              </label>
+              <label for="filter_cracked">
+                  <input type="radio" name='effect' id="filter_cracked" value="cracked">
+                  cracked
+              </label>
+              <label for="filter_wrap">
+                  <input type="radio" name='effect' id="filter_wrap" value="wrap">
+                  wrap
+              </label>
+              <label for="filter_oilpainting">
+                  <input type="radio" name='effect' id="filter_oilpainting" value="oilpainting">
+                  oilpainting
+              </label>
+              <br>
+              <label for="filter_xray">
+                  <input type="radio" name='effect' id="filter_xray" value="xray">
+                  xray
+              </label>
+              <label for="filter_contrast">
+                  <input type="radio" name='effect' id="filter_contrast" value="contrast">
+                  contrast
+              </label>
+              <label for="filter_crosshatch">
+                  <input type="radio" name='effect' id="filter_crosshatch" value="crosshatch">
+                  crosshatch
+              </label>
+              <label for="filter_esuqe">
+                  <input type="radio" name='effect' id="filter_esuqe" value="esuqe">
+                  esuqe
+              </label>
+              <label for="filter_mosaic">
+                  <input type="radio" name='effect' id="filter_mosaic" value="mosaic">
+                  mosaic
+              </label>
+              <label for="filter_watercolour">
+                  <input type="radio" name='effect' id="filter_watercolour" value="watercolour">
+                  watercolour
+              </label>
+          </label>
+          <div><br> </div>
+          <label for="ornaments">Ornaments<br>
+            <label for="ornaments_facemask">
+                <input type="radio" name='effect' id="ornaments_facemask" value="facemask">
+                facemask
+              </label>
+              <label for="ornaments_cutecat">
+                <input type="radio" name='effect' id="ornaments_cutecat" value="cutecat">
+                CuteCat <br>
+              </label>
+              <label for="interactivemode_check">Interactive Mode
+                <input type="checkbox" id="interactivemode_check"  />
+              </label>
+        </label>
+      </div>
+  </fieldset>
+  <script src="https://unpkg.com/@tensorflow/tfjs-core@2.1.0/dist/tf-core.js"></script>
+    <script src="https://unpkg.com/@tensorflow/tfjs-converter@2.1.0/dist/tf-converter.js"></script>
+
+    <!-- You must explicitly require a TF.js backend if you're not using the tfs union bundle. -->
+    <script src="https://unpkg.com/@tensorflow/tfjs-backend-wasm@2.1.0/dist/tf-backend-wasm.js"></script>
+    <script src="https://unpkg.com/@tensorflow/tfjs-backend-webgl@2.4.0/dist/tf-backend-webgl.js"></script>
+    <script src="https://unpkg.com/@tensorflow/tfjs-backend-cpu@2.4.0/dist/tf-backend-cpu.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/facemesh"></script>
+
+    <script src="../videoEffectSdk/videoEffect.js"></script>
+    <script src="./dev/utils.js"></script>
+    <script src="./dev/triangulation.js"></script>
+    <script src="./dev/shader.js"></script>
+    <script src="./dev/opengl.js"></script>
+    <script src="./EffectSample.js"></script>
+  </body>
+</html>
